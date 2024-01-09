@@ -21,7 +21,7 @@ async function getData(){
   return (
   
    <div>Welcome Home today you have to do 
-    <h1 style={{fontFamily:'Saltburn',fontSize:200,color:'yellow'}}>{data[ran_int].things_to_do}</h1>
+    <h1 style={{fontFamily:'Saltburn',fontSize:60,color:'yellow'}}>{data![ran_int].things_to_do}</h1>
     <button>Did</button>
     <button>Nope</button>
    </div>
