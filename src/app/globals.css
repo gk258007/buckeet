@@ -25,3 +25,9 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+@font-face {
+  font-family: 'Saltburn';
+  src: url('../../assets/Saltburn/saltburn.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
