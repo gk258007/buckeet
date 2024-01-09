@@ -1,11 +1,24 @@
-import React from 'react'
-import {RegisterLink, LoginLink} from "@kinde-oss/kinde-auth-nextjs/components";
+import React, { useEffect, useState } from 'react'
+import supabase from '../../utils/supabase'
 
-export default function page() {
+async function getData(){
+  const { data} = await supabase.from("UruSuThona").select("things_to_do");
+  return {data};
+
+}
+  
+  export default async function page() {
+    const ran_int = Math.floor(Math.random() * 10);
+    // let place = data[ran_int]
+    
+    // console.log(place)
+    const { data }= await getData()
+    console.log(data[ran_int])
   return (
-  <div>
-    LessGo💨💨
-    </div>
+  
+   <div>Welcome Home today you have to do 
+    <h1>{data[ran_int].things_to_do}</h1>
+   </div>
+  );
 
-  )
 }
