@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Link from 'next/link'
-import { ClerkProvider } from '@clerk/nextjs'
+import { ClerkProvider, UserButton } from '@clerk/nextjs'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,22 +17,27 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-  
-      <html lang="en">
+    <ClerkProvider>
+       <html lang="en">
       <body className={inter.className}>
         <main>
-          <nav style={{backgroundColor:'purple',textAlign:'center'}}>
-            <Link href="/" style={{margin:50}}>
+          <nav style={{ backgroundColor: 'purple',display: 'flex', justifyContent: 'space-between', padding: '5px' }}>
+            <Link href="/" style={{marginLeft:550,justifyContent:'center'}}>
               Home
             </Link>
-            <Link href="/list">
-              ADD
-            </Link>
+            <Link href="/list" style={{marginRight:200}}>
+                  ADD
+                </Link>
+                <div>
+                <UserButton afterSignOutUrl="/" />
+              </div>
           </nav>
         </main>
         {children}
         </body>
     </html>
+    </ClerkProvider>
+     
     
   )
 }
