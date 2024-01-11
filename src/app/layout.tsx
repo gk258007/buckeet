@@ -18,26 +18,28 @@ export default function RootLayout({
 }) {
   return (
     <ClerkProvider>
-       <html lang="en">
-      <body className={inter.className}>
-        <main>
-          <nav style={{ backgroundColor: 'purple',display: 'flex', justifyContent: 'space-between', padding: '5px' }}>
-            <Link href="/">
-              Home
-            </Link>
-            <Link href="/list">
+      <html lang="en">
+        <body className={inter.className}>
+          <main>
+            <nav style={{ backgroundColor: 'purple', display: 'flex', justifyContent: 'space-between', padding: '5px', flexDirection: 'row' }}>
+              <div>
+                <Link href="/" style={{ justifyContent: 'center', color: 'white' }}>
+                  Home
+                </Link>
+              </div>
+              <div>
+                <Link href="/list" style={{ textAlign: 'center', color: 'white' }}>
                   ADD
                 </Link>
-                <div>
+              </div>
+              <div>
                 <UserButton afterSignOutUrl="/" />
               </div>
-          </nav>
-        </main>
-        {children}
+            </nav>
+          </main>
+          {children}
         </body>
-    </html>
+      </html>
     </ClerkProvider>
-     
-    
   )
 }
