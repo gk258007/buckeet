@@ -22,10 +22,10 @@ export default function RootLayout({
       <body className={inter.className}>
         <main>
           <nav style={{ backgroundColor: 'purple',display: 'flex', justifyContent: 'space-between', padding: '5px' }}>
-            <Link href="/" style={{marginLeft:550,justifyContent:'center'}}>
+            <Link href="/">
               Home
             </Link>
-            <Link href="/list" style={{marginRight:200}}>
+            <Link href="/list">
                   ADD
                 </Link>
                 <div>
