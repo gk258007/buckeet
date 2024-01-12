@@ -11,7 +11,7 @@ export default async function page() {
   
 
   return (
-    <div>Here We Add stuff to the Bucket List 🪣 
+    <div style={{fontFamily:'MADE',fontSize:30}}>Here We Add stuff to the Bucket List 🪣 
     </div>
   )
 }

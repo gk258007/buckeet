@@ -3,6 +3,8 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Link from 'next/link'
 import { ClerkProvider, UserButton } from '@clerk/nextjs'
+import bg from "../../assets/wallpaper/Clouds.png"
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,16 +21,16 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={inter.className}>
+        <body className={inter.className} style={{ backgroundImage :`url(${bg.src})`}}>
           <main>
-            <nav style={{ backgroundColor: 'purple', display: 'flex', justifyContent: 'space-between', padding: '5px', flexDirection: 'row' }}>
+            <nav style={{display: 'flex', justifyContent: 'space-between', padding: '5px', flexDirection: 'row' }}>
               <div>
-                <Link href="/" style={{ justifyContent: 'center', color: 'white' }}>
+                <Link href="/" style={{ fontFamily:'MADE',justifyContent: 'center', color: 'white' }}>
                   Home
                 </Link>
               </div>
               <div>
-                <Link href="/list" style={{ textAlign: 'center', color: 'white' }}>
+                <Link href="/list" style={{ fontFamily:'MADE',textAlign: 'center', color: 'white' }}>
                   ADD
                 </Link>
               </div>

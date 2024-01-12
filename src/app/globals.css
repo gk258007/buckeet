@@ -31,3 +31,27 @@ body {
   font-weight: 400;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Tox';
+  src: url('../../assets/Tox/Tox.ttf');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NeugAsias';
+  src: url('../../assets/NeugAsia/NeugAsiaSDemo.ttf');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NeugAsia';
+  src: url('../../assets/NeugAsia/NeugAsiaDemo.ttf');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MADE';
+  src: url('../../assets/MA/MADE.otf');
+  font-weight: 200;
+  font-style: normal;
+}

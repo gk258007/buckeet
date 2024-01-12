@@ -20,10 +20,11 @@ async function getData(){
     const { data }= await getData()
     console.log(data)
   return (
-   <div>Welcome Home today you have to do 
+   <div>
+    <h1 style={{fontFamily:'MADE',fontSize:30}}>Welcome aboard today you have to go ☀️</h1>
     <div style={{marginLeft:50}}>
     </div>
-    <h1 style={{fontFamily:'Saltburn',fontSize:60,color:'yellow'}}>{data![ran_int].things_to_do}</h1>
+    <h1 style={{fontFamily:'NeugAsia',fontSize:60,color:'yellow'}}>{data![ran_int].things_to_do}</h1>
    </div>
   );
 
