@@ -16,7 +16,7 @@ export default async function page() {
   
 
   return (
-    <div style={{fontFamily:'MADE',fontSize:30}}>
+    <div style={{fontFamily:'MADE',fontSize:30,}}>
       <h1>Here We Add stuff to the Bucket List 🪣 </h1>
       <Form/>
       
