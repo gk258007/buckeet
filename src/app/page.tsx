@@ -1,7 +1,7 @@
 
 import React from 'react'
 import supabase from '../../utils/supabase'
-import { UserButton } from "@clerk/nextjs";
+
 
 
 async function getData(){
