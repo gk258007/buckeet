@@ -30,8 +30,13 @@ export default function RootLayout({
                 </Link>
               </div>
               <div>
-                <Link href="/list" style={{ fontFamily:'MADE',textAlign: 'center', color: 'white' }}>
+                <Link href="/add" style={{ fontFamily:'MADE',textAlign: 'center', color: 'white' }}>
                   ADD
+                </Link>
+              </div>
+              <div>
+                <Link href="/list" style={{ fontFamily:'MADE',textAlign: 'center', color: 'white' }}>
+                  List
                 </Link>
               </div>
               <div>
