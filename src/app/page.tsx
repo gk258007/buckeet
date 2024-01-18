@@ -16,7 +16,7 @@ async function getData(){
     
     const { data }= await getData()
     let length= data?.length
-    const ran_int = Math.floor(Math.random() * length!);
+    const ran_int = Math.floor(Math.random() * 4);
     //let place = data[ran_int]
     
     //console.log(place)
