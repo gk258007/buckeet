@@ -31,7 +31,7 @@ async function getData(){
     </div>
     <h1 style={{fontFamily:'NeugAsia',fontSize:60,color:'yellow'}}>{data![ran_int].place}</h1>
     <h1 style={{fontFamily:'NeugAsia',fontSize:60,color:'yellow'}}>{data![ran_int].Location}</h1>  
-      
+      <p>NEWWWWWWWWW</p>
    </div>
   );
 
