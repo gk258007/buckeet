@@ -7,7 +7,7 @@ import supabase from '../../utils/supabase'
 async function getData(){
   const { data} = await supabase
   .from("titbit")
-  .select("place")
+  .select("place,Location")
   return {data};
 
 }
@@ -29,7 +29,9 @@ async function getData(){
     <div style={{marginLeft:50}}>
      
     </div>
-    <h1 style={{fontFamily:'NeugAsia',fontSize:60,color:'yellow'}}>{data![ran_int].place}</h1>  
+    <h1 style={{fontFamily:'NeugAsia',fontSize:60,color:'yellow'}}>{data![ran_int].place}</h1>
+    <h1 style={{fontFamily:'NeugAsia',fontSize:60,color:'yellow'}}>{data![ran_int].Location}</h1>  
+      
    </div>
   );
 
