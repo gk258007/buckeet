@@ -1,15 +1,28 @@
 
 import React from 'react'
 import supabase from '../../utils/supabase'
-
+import router from 'next/router';
+import Refre from './refre/Refre';
 
 
 async function getData(){
+  
   const { data} = await supabase
   .from("titbit")
   .select("place,Location")
   return {data};
+}
 
+// async function addFreq(count){
+//   const { ddata } = await supabase
+//   .from("titbit")
+//   .insert({Freq:count})
+//   .eq('place',data[ran_int].place)
+// }
+async function randomgen(){
+  const { data }= await getData()
+    let length= data?.length
+    const ran_int = Math.floor(Math.random() * length!);
 }
 
   export default async function page() {
@@ -31,7 +44,7 @@ async function getData(){
     </div>
     <h1 style={{fontFamily:'NeugAsia',fontSize:60,color:'yellow'}}>{data![ran_int].place}</h1>
     <h1 style={{fontFamily:'NeugAsia',fontSize:60,color:'yellow'}}>{data![ran_int].Location}</h1>  
-      <p>NEWWWWWWWWW</p>
+      
    </div>
   );
 
