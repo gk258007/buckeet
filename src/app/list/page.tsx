@@ -2,12 +2,16 @@ import React from 'react'
 import supabase from '../../../utils/supabase'
 
 
-
+async function getData(){
+    const { data } = await supabase.from('titbit').select('place, Location');
+    return { data };
+}
 
 export default async function page() {
-    const { data } = await supabase.from('titbit').select('place, Location');
-   
+    
+    const {data } = await getData();
     return (
+        
         <div >
         {data?.map((item,index)=>(
             <div key={index} style={{margin:10,fontFamily:'MADE',fontSize:20,color:'yellow'}}>
