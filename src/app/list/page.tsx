@@ -9,7 +9,7 @@ async function getData(){
 }
 
 export default async function page() {
-    
+    var thiss ="omgg"
     const {data } = await getData();
     return (
         
