@@ -1,7 +1,7 @@
 import React from 'react'
 import supabase from '../../../utils/supabase'
 
-export const revalidate =0;
+export const dynamic = "force-dynamic";
 
 async function getData(){
     const { data } = await supabase.from('titbit').select('place, Location');
