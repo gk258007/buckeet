@@ -18,7 +18,7 @@ const  updatefre = async()=>{
   return (
     
     <div>
-        <h1>Fetching from the place {data} </h1>
+        
         <button onClick={updatefre}>We did go</button>
         </div>
   )
