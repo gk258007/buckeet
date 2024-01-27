@@ -4,7 +4,7 @@ import Place from './place';
 export const dynamic = "force-dynamic";
 
 async function getData(){
-    const { data } = await supabase.from('titbit').select('place, Location');
+    const { data } = await supabase.from('titbit').select('place, Location,id');
     return { data };
 }
 
@@ -12,9 +12,9 @@ export default async function page() {
     const {data: places } = await getData();
     return (
         
-        <div >
+        <div>
             
-        {places?.map(place=><Place place={place}/>)}
+        {places?.map(place=><Place key={place.id} place={place}/>)}
        
       </div>
   )
