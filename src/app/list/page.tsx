@@ -1,27 +1,21 @@
 import React from 'react'
 import supabase from '../../../utils/supabase'
-
+import Place from './place';
 export const dynamic = "force-dynamic";
 
 async function getData(){
-    const { data } = await supabase.from('titbit').select('place, Location');
+    const { data } = await supabase.from('titbit').select('place, Location,id');
     return { data };
 }
 
 export default async function page() {
-    
-    const {data } = await getData();
+    const {data: places } = await getData();
     return (
         
-        <div >
-        {data?.map((item,index)=>(
-            <div key={index} style={{margin:10,fontFamily:'MADE',fontSize:20,color:'yellow'}}>
-                <div style={{borderRadius:10,borderWidth:1,padding:12,borderColor:'black'}}>
-                    <p>{item.place}</p>
-                    <p>{item.Location}</p>
-                    </div>
-                </div>
-        ))}
+        <div>
+            
+        {places?.map(place=><Place key={place.id} place={place}/>)}
+       
       </div>
   )
   
