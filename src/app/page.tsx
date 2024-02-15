@@ -29,7 +29,6 @@ async function countup(){
   return (
    <div>
     <h1 style={{fontFamily:'MADE',fontSize:30}}>Welcome aboard today you have to go ☀️</h1>
-
     <h1 style={{fontFamily:'NeugAsia',fontSize:60,color:'yellow'}}>{data![ran_int].place}</h1>
     <h1 style={{fontFamily:'NeugAsia',fontSize:60,color:'yellow'}}>{data![ran_int].Location}</h1>  
     <Buttonf data={data![ran_int].id}/>      

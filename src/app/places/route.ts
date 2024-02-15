@@ -5,18 +5,26 @@ import { NextResponse } from "next/server";
 export async function PUT(request: Request){
     const supabase = createRouteHandlerClient({cookies});
  
-
+    let count = 1;
 
     const {place} = await request.json()
-    console.log("from the api route", place)
-    const countdata = await supabase.from("titbit").select("Freq").eq('place',place)
-    console.log("The frequency data ",countdata.data![0].Freq)
-    let count = countdata.data![0].Freq + 1
-    console.log("The incremented value,",count)
-   const { data } = await supabase
-   .from("titbit")
-   .update({'Freq':count})
-   .eq('place',place)
-   console.log("The response afte the update ",data)
-   return NextResponse.json(data);
+    //console.log("from the api route", place)
+
+    let initcount = await supabase 
+    .from('titbit')
+    .select('Freq')
+    .eq('id',place)
+    //console.log("Response from freq retreival", initcount.data)
+    // @ts-ignore: Object is possibly 'null'.
+    let inccount = initcount.data[0].Freq
+    //console.log("The Freq from the database", inccount)
+    count = inccount + 1
+    const countdata = await supabase
+    .from('titbit')
+  .update({ Freq: count })
+  .eq('id', place)
+
+    //console.log("Updated Freq count",count)
+
+   return NextResponse.json(countdata);
 }
