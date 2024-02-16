@@ -4,17 +4,17 @@ import React, { useState } from 'react'
 
 
 export default function Buttonf({data}:{data:any}) {
-const[resstat,setResstat] =useState<any>(false);
-const sendData=async()=>{
-let resp = await updatefre()
-if(resp.status==200)
-{
+// const[resstat,setResstat] =useState(false);
+// const sendData=async()=>{
+// let resp = await updatefre()
+// if(resp.status==200)
+// {
 
-  setResstat(true)
-}else{
-  alert("SandStorm")
-}
-}
+//   setResstat(true)
+// }else{
+//   alert("SandStorm")
+// }
+// }
 
 const  updatefre = async()=>{
   let response=await fetch(`./places`,{
@@ -29,8 +29,8 @@ const  updatefre = async()=>{
     <div>
        
     
-        <button onClick={sendData} style={{fontSize:50,fontFamily:'NeugAsia'}}>LessGooooo🚀🚀</button>
-        {resstat? <p style={{fontSize:50,fontFamily:'MADE'}}>Data was sent</p>:<p>DAMN!!</p>}
+        <button onClick={updatefre} style={{fontSize:50,fontFamily:'NeugAsia'}}>LessGooooo🚀🚀</button>
+        {/* {resstat? <p style={{fontSize:50,fontFamily:'MADE'}}>Data was sent</p>:<p>DAMN!!</p>} */}
         </div>
   )
 }
