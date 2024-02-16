@@ -8,15 +8,15 @@ export async function PUT(request: Request){
     let count = 1;
 
     const {place} = await request.json()
-    //console.log("from the api route", place)
+    console.log("from the api route", place)
 
     let initcount = await supabase 
     .from('titbit')
     .select('Freq')
     .eq('id',place)
-    //console.log("Response from freq retreival", initcount.data)
-    // @ts-ignore: Object is possibly 'null'.
-    let inccount = initcount.data[0].Freq
+    console.log("Response from freq retreival", initcount.data)
+    
+    let inccount = initcount.data![0].Freq
     //console.log("The Freq from the database", inccount)
     count = inccount + 1
     const countdata = await supabase
@@ -24,7 +24,8 @@ export async function PUT(request: Request){
   .update({ Freq: count })
   .eq('id', place)
 
-    //console.log("Updated Freq count",count)
+    console.log("Updated Freq count",count)
 
+   
    return NextResponse.json(countdata);
 }
