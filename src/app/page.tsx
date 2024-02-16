@@ -1,8 +1,7 @@
 
 import React from 'react'
 import supabase from '../../utils/supabase'
-import router from 'next/router';
-import Refre from './refre/Refre';
+
 import Buttonf from './component/buttonf';
 
 
