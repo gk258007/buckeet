@@ -15,8 +15,8 @@ export async function PUT(request: Request){
     .select('Freq')
     .eq('id',place)
     console.log("Response from freq retreival", initcount.data)
-    
-    let inccount = initcount.data![0].Freq
+     // @ts-ignore: Object is possibly 'null'.
+    let inccount = initcount.data[0].Freq
     //console.log("The Freq from the database", inccount)
     count = inccount + 1
     const countdata = await supabase
