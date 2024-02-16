@@ -30,7 +30,7 @@ const  updatefre = async()=>{
        
     
         <button onClick={sendData} style={{fontSize:50,fontFamily:'NeugAsia'}}>LessGooooo🚀🚀</button>
-        {resstat? <p style={{fontSize:50,fontFamily:'MADE'}}>Data was sent</p>:<p></p>}
+        {resstat? <p style={{fontSize:50,fontFamily:'MADE'}}>Data was sent</p>:<p>DAMN!!</p>}
         </div>
   )
 }
