@@ -1,6 +1,8 @@
 
 import React from 'react'
 import supabase from '../../utils/supabase'
+import router from 'next/router';
+import Refre from './refre/Refre';
 import Buttonf from './component/buttonf';
 
 
@@ -19,7 +21,7 @@ async function getData(){
     const { data }= await getData()
     let length= data?.length
     const ran_int = Math.floor(Math.random() * length!);
-   // console.log("The place that was fetched from the random generator",data![ran_int].place)
+   console.log("The place that was fetched from the random generator",data![ran_int].place)
   return (
    <div>
     <h1 style={{fontFamily:'MADE',fontSize:30}}>Welcome aboard today you have to go ☀️</h1>

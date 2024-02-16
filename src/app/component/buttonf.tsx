@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 
 
 export default function Buttonf({data}:{data:any}) {
-const[resstat,setResstat] =useState<any>();
+const[resstat,setResstat] =useState<any>(false);
 const sendData=async()=>{
 let resp = await updatefre()
 if(resp.status==200)
@@ -14,7 +14,6 @@ if(resp.status==200)
 }else{
   alert("SandStorm")
 }
-console.log("The response from the api request sent through the SendData button",resp.status)
 }
 
 const  updatefre = async()=>{
