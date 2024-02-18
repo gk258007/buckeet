@@ -17,7 +17,7 @@ if(resp.status==200)
 }
 
 const  updatefre = async()=>{
- let resp= await fetch(`./places`,{
+ let resp= await fetch(`http://localhost:3000/places`,{
         method: "put",
         body: JSON.stringify({place: data})
     });
@@ -29,7 +29,7 @@ const  updatefre = async()=>{
     <div>
        
     
-        <button onClick={updatefre} style={{fontSize:50,fontFamily:'NeugAsia'}}>LessGooooo🚀🚀</button>
+        <button onClick={sendData} style={{fontSize:50,fontFamily:'NeugAsia'}}>LessGooooo🚀🚀</button>
         {resstat? <p style={{fontSize:50,fontFamily:'MADE'}}>Data was sent</p>:<p>DAMN!!</p>}
         </div>
   )
