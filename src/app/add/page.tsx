@@ -1,6 +1,5 @@
 
 import React from 'react'
-import { revalidatePath } from 'next/cache'
 import Form from '../component/form'
 
 

@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 
 
 export default function Buttonf({data}:{data:any}) {
-const[resstat,setResstat] =useState(false);
+const[resstat,setResstat] =useState<any>(false);
 const sendData=async()=>{
 let resp = await updatefre()
 if(resp.status==200)
@@ -17,7 +17,7 @@ if(resp.status==200)
 }
 
 const  updatefre = async()=>{
- let resp= await fetch(`http://localhost:3000/places`,{
+ let resp= await fetch('http://localhost:3000/places',{
         method: "put",
         body: JSON.stringify({place: data})
     });
