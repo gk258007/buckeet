@@ -12,7 +12,7 @@ if(resp.status==200)
 
   setResstat(true)
 }else{
-  alert("SandStorm")
+  alert("SandStorm Visit the Sietch")
 }
 }
 
