@@ -17,7 +17,7 @@ if(resp.status==200)
 }
 
 const  updatefre = async()=>{
- let resp= await fetch('http://localhost:3000/places',{
+ let resp= await fetch('./places',{
         method: "put",
         body: JSON.stringify({place: data})
     });
